@@ -1,0 +1,142 @@
+@import url('https://fonts.googleapis.com/css2?family=Handlee&family=Playfair+Display&display=swap');
+
+:root {
+    --bg--: #fffdfd;
+    --darkbg--:  #a9a9a9;
+    --grey--: #c3bbbb;
+    --textcolor--: #0c0663;
+    --linaer--: linear-gradient(90deg, var(--bg--) 60%, #fffdfd);
+    --linaer2--: linear-gradient(180deg, var(--bg--) 80%, #fffdfd);
+    --shadow--: rgba(255, 255, 255, 0.2);
+    --blueshad--: rgba(20, 21, 72, 0.21);
+}
+
+h1 {
+    font-size: 40px;
+    font-family: 'Playfair Display', serif;
+}
+
+.main-section {
+    display: flex;
+    justify-content: space-between;
+    font-family: 'Handlee', cursive;
+}
+
+.rent {
+    background: var(--darkbg--);
+    color: var(--textcolor--);
+    border: none;
+    border-radius: 0.5rem;
+    padding: 0.7rem 2rem;
+    font-family: 'Handlee', cursive;
+}
+
+.more {
+    background: transparent;
+    border: 1px solid var(--textcolor--);
+    color: var(--textcolor--);
+    border-radius: 0.5rem;
+    padding: 0.7rem 2rem;
+    font-family: 'Handlee', cursive;
+}
+
+.rent:hover {
+    background: transparent;
+    border: 1px solid var(--textcolor--);
+    color: var(--textcolor--);
+}
+
+.more:hover {
+    background: var(--darkbg--);
+    color: var(--textcolor--);
+    border: none;
+}
+
+.rent_car form {
+    background: var(--darkbg--);
+    color: var(--textcolor--);
+    border-radius: 0.5rem;
+    padding: 0.7rem 2rem;
+    font-family: 'Handlee', cursive;
+    display: flex;
+    justify-content: space-around;
+}
+
+label {
+    display: block;
+    padding: 0.5rem;
+}
+
+input {
+    background: transparent;
+    border: 1px solid var(--textcolor--);
+    color: var(--textcolor--);
+    border-radius: 0.5rem;
+    padding: 0.7rem 0.5rem;
+    font-family: 'Handlee', cursive;
+}
+
+input::placeholder {
+    color: var(--textcolor--);
+}
+
+.search {
+    background: var(--darkbg--);
+    cursor: pointer;
+    color: var(--textcolor--);
+    border: none;
+    border-radius: 0.6rem;
+    margin-top: 2rem;
+    padding: 0.7rem 0.5rem;
+    font-family: 'Handlee', cursive;
+    width: 6rem;
+}
+
+.work {
+    text-align: center;
+}
+
+.steps {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.steps div {
+    border: 1px solid var(--textcolor--);
+    border-radius: 1rem;
+    margin-left: 1rem;
+    padding: 1rem;
+}
+
+.steps div i  {
+    border-radius: 50%;
+    font-size: 1.5rem;
+    padding: 2rem;
+    background: var(--darkbg--);
+}
+
+@media (max-width:40rem) {
+    .main-section {
+        flex-direction: column;
+    }
+    .main-img img {
+        width: 60%;
+    }
+    .rent_car form {
+        flex-direction: column;
+        padding: 0.7rem 2rem;
+    }
+    .steps {
+        flex-direction: column;
+    }
+    .steps div {
+        margin: 1rem 0;
+    }
+    input {
+        width: 100%;
+    }
+    .search {
+        align-self: center;
+    }
+}

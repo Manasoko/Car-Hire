@@ -1,0 +1,157 @@
+@import url('https://fonts.googleapis.com/css2?family=Handlee&family=Playfair+Display&display=swap');
+
+:root {
+  --bg--: #fffdfd;
+  --grey--: #424242;
+  --textcolor--: #0c0663;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background: var(--bg--);
+  color: var(--textcolor--);
+}
+
+.backdrop {
+  display: none;
+  position: fixed;
+  opacity: 0;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.5);
+  transition: opacity 0.2s linear;
+}
+
+header {
+  padding: 1rem;
+  color: var(--textcolor--);
+  background-color:var(--bg--);
+  box-shadow: 3px 3px 5px var(--shad--);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.head {
+  text-decoration: none;
+  color: var(--textcolor--);
+  font-family: 'Playfair Display', serif;
+}
+
+.nav-items {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: inline;
+  display: flex;
+  justify-content: flex-end;
+  font-family: 'Handlee', cursive;
+}
+
+
+nav li {
+  padding: 0.5rem 0;
+}
+
+nav li a {
+  padding: 0.5rem;
+  text-decoration: none;
+  color: var(--textcolor--);
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.nav-item:hover {
+  background-color: var(--textcolor--);
+  color: var(--bg--);
+  border-radius: 0.5rem;
+  transform: scale(1.1);
+  animation: pulse 0.5s ease-out;
+}
+
+.toggle-button {
+  border: none;
+  background: var(--bg--);
+  cursor: pointer;
+  padding-top: 0;
+  padding-bottom: 0;
+  vertical-align: middle;
+  text-decoration: none;
+  color: var(--textcolor--);
+}
+
+.mobile-nav {
+  display: none;
+  transform: translateX(-100%);
+  position: fixed;
+  z-index: 101;
+  top: 0;
+  left: 0;
+  background: var(--bg--);
+  width: 80%;
+  height: 100vh;
+  transition: transform 3s ease-out;
+}
+
+.sidebar {
+  list-style: none;
+  font-family: 'Handlee', cursive;
+  position: fixed;
+  top: 0;
+  right: 0;
+  height: 100vh;
+  padding: 0;
+  width: 90%;
+  margin: auto;
+  background-color: var(--rd--);
+  backdrop-filter: blur(10px);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+
+.sidebar li {
+  width: 100%;
+  margin: 1rem;
+}
+
+.sidebar a {
+  width: 100%;
+  font-size: 2rem;
+}
+
+.open {
+  display: block !important;
+  opacity: 1 !important;
+  transform: translateY(0) !important;
+}
+
+@keyframes pulse {
+    0% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.1);
+    }
+    100% {
+      transform: scale(1);
+    }
+}
+
+@media (min-width:40rem) {
+  .toggle-button {
+      display: none;
+  }
+}
+
+@media (max-width:40rem) {
+  .nap {
+    display: none;
+  }
+}
