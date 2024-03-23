@@ -5,7 +5,6 @@ Welcome to our Car Hire Website! This platform is designed to make your car rent
 ## Table of Contents
 
 - [Features](#features)
-- [Getting Started](#getting-started)
 - [How to Use](#how-to-use)
 - [Account Management](#account-management)
 - [Contact Us](#contact-us)
